@@ -1,0 +1,358 @@
+*:not(span) {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    align-items: center;
+    background: black;
+}
+
+span, strong {
+    white-space: nowrap;
+}
+
+#Banner {
+    padding: 25px 0;
+    width: 100%;
+    font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman", serif;
+    font-size: min(4rem, 5.4vw);
+    background: rgb(15,15,15);
+}
+
+#Banner::before, h2::before {
+    content: "";
+    padding-left: 1.5em;
+    background: url(./Images/Logo.png) no-repeat left;
+    background-size: contain;
+    filter: invert(100%);
+}
+
+#Banner::after, h2::after {
+    content: "";
+    padding-right: 1.5em;
+    background: url(./Images/Logo.png) no-repeat right;
+    background-size: contain;
+    filter: invert(100%);
+}
+
+#CovidMsg {
+    align-self: flex-start;
+    padding: 10px 15px;
+    width: 100%;
+    background-color: rgba(255,165,0,1);
+    font-size: min(1.2rem, 4.2vw);
+    z-index: 10;
+}
+
+#NavAndMain {
+    display: flex;
+    max-width: 1200px;
+}
+
+nav {
+    padding: 25px;
+    padding-right: 40px;
+    background: linear-gradient(rgb(40,40,40),rgb(70,70,70));
+    font-size: min(1.5rem, 5vw);
+    font-weight: 200;
+    z-index: 20;
+}
+
+nav div {
+    display: flex;
+    flex-direction: column;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10%; /* Used solely to make the div sticky. */
+}
+
+nav a {
+    margin: 20px 0;
+    text-align: left;
+}
+
+nav a:hover {
+    color: rgb(125,125,125);
+    transition: 0.2s;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background: rgb(15,15,15);
+}
+
+#HeroImage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 50px;
+    background: linear-gradient(rgba(15,15,15,.5), rgba(15,15,15,1)), url(./Images/HeroImage.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#HeroImage h1 {
+    flex: 2;
+    font-family: "Cambria", "Cochin", Georgia, Times, "Times New Roman", serif;
+    font-size: min(6rem, 8vw);
+}
+
+#HeroImage p {
+    flex: 1;
+    font-family: "Cambria", "Cochin", Georgia, Times, "Times New Roman", serif;
+    font-size: min(2rem, 4vw);
+    font-weight: 100;
+}
+
+#HeroImage .Button {
+    flex: 1;
+    padding: 20px 30px;
+    border: solid 5px rgb(100, 165, 255);
+    border-radius: 60px;
+    font-size: min(2rem, 8vw);
+    font-weight: 500;
+    color: rgb(100, 165, 255);
+}
+
+#HeroImage .Button:hover {
+    background: rgb(100, 165, 255);
+    border-color: white;
+    color: white;
+    transition: 0.2s;
+}
+
+h2 {
+    margin-bottom: 10px; /* b */
+    font-family: "Cambria", "Cochin", Georgia, Times, "Times New Roman", serif;
+    font-size: min(4rem, 8vw);
+}
+
+#LinkAbout {
+    height: 0;
+}
+
+#About {
+    margin: 10rem 0 6rem;
+    padding: 0 50px;
+    background: linear-gradient(to bottom, rgba(15,15,15,0.6), rgba(15,15,15,1)), url(./Images/NintendoSwitch2.png) no-repeat bottom right;
+    background-size: contain;
+}
+
+#About .description {
+    margin-bottom: 20px;
+    font-size: min(1.4rem, 4vw);
+}
+
+#About .info {
+    margin-top: 15px;
+    text-align: left;
+    font-size: min(1.2rem, 4vw);
+}
+
+#Features {
+    margin: 2rem 0; /* A */
+    padding: 0 5px; /* b (Left + Right = 2*5px) */
+    display: flex;
+    flex-direction: column;
+}
+
+#Features div {
+    display: flex;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5px 0; /* b (Left + Right = 2*5px) */
+    padding: 10px; /* c */
+    background: rgb(30,30,30)
+}
+
+article h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px; /* c */
+    font-size: min(2rem, 8vw);
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+article img {
+    margin-bottom: 10px; /* c */
+    vertical-align: bottom;
+    width: 100%;
+    object-fit: cover;
+}
+
+article p {
+    text-align: left;
+}
+
+footer {
+    padding: 15px 15px 20px;
+    width: 100%;
+    background-color: rgb(90,90,90); 
+    color: rgba(0,0,0,0.5);
+    font-size: min(1.2rem, 4vw);
+    font-weight: 600;
+}
+
+#SocialMedia {
+    padding: 4rem 40px;
+    width: 100%;
+    background-color: rgb(30,30,30); 
+}
+
+#SocialMedia h2 {
+    font-size: min(4rem, 4vw);
+}
+
+#SM_Discord::before {
+    background: url(https://image.flaticon.com/icons/svg/2111/2111370.svg) no-repeat left;
+}
+
+#SM_Facebook::before {
+    background: url(https://image.flaticon.com/icons/svg/174/174848.svg) no-repeat left;
+}
+
+#SM_Twitter::before {
+    background: url(https://image.flaticon.com/icons/svg/174/174876.svg) no-repeat left;
+}
+
+#SM_Twitch::before {
+    background: url(https://image.flaticon.com/icons/svg/2111/2111668.svg) no-repeat left;
+}
+
+#SocialMedia h3::before {
+    content: "";
+    padding-left: 1.6em;
+    background-size: contain;
+}
+
+#SocialMedia h3 {
+    margin-top: 40px;
+    font-size: min(2rem, 2vw);
+    font-weight: 600;
+}
+
+#SocialMedia h3 a {
+    text-decoration: underline;
+}
+
+#SocialMedia h4 {
+    margin-top: 60px;
+    font-size: min(1.5rem, 2vw);
+    font-weight: 600;
+}
+
+
+@media screen and (max-height: 640px) {
+    #HeroImage {
+        padding: 4rem 15px 4rem;
+    }
+
+    #HeroImage h1 {
+        flex: 3;
+    }
+
+    #HeroImage p {
+        flex: 2;
+    }
+
+    #HeroImage .Button {
+        flex: 2;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    #HeroImage {
+        padding: 1rem 15px 1rem;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    /* Makes the articles stack vertically (applies to 920px or under) */
+    #Features div {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    span:not(.span-keep), strong {
+        white-space: unset;
+    }
+
+    #About {
+        margin: 4rem 0;
+        padding: 0 15px;
+    }
+
+    #SocialMedia {
+        padding: 2rem 15px;
+    }
+
+    #SocialMedia h2 {
+        font-size: min(4rem, 6vw);
+    }
+
+    #SocialMedia h3, #SocialMedia h4 {
+        font-size: min(1.5rem, 5vw);
+    }
+
+    .Remove-on-Mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Makes the navbar appear on top of main */
+    #NavAndMain {
+        flex-direction: column;
+    }
+
+    /* Makes the navbar stick */
+    nav {
+        padding: 10px 25px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0; /* Used solely to make the div sticky. */
+    }
+
+    /* Makes the navbar elements stack horizontally */
+    nav div {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    nav a {
+        margin: 0;
+        text-align: center;
+    }
+
+    #HeroImage h1 {
+        font-size: min(6rem, 12vw);
+    }
+    
+    #HeroImage p {
+        font-size: min(2rem, 6vw);
+    }
+
+    h2 {
+        font-size: min(4rem, 12vw);
+    }
+
+    #SocialMedia h2 {
+        font-size: min(4rem, 10vw);
+    }
+}
