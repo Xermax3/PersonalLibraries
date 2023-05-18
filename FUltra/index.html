@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="playerCar.js"></script>
+    <script src="checkpoint.js"></script>
+    <script src="surface.js"></script>
+    <script src="wall.js"></script>
+    <script src="decoration.js"></script>
+    <script src="mainCode.js"></script>
+    <title>F-Ultra</title>
+</head>
+<body>
+    <h1 id="perm-title">~ Playing F-Ultra ~</h1>
+    <main>
+        <div id="menu-container">
+            <h1 id="menu-title">F-ULTRA</h1>
+            <p id="menu-credits">Made by Maxence Roy (2020)</p>
+            <button id="play-btn">Play</button>
+            <p>How to play: 'W' to move forward, 'A' & 'D' to steer</p>
+            <p>Clear the courses as fast as possible!</p>
+        </div>
+        <div id="gameover-container">
+            <h2>Game Over!</h2>
+            <h3 id="gameover-score"></h3>
+            <button id="play-again-btn">Play Again</button>
+            <button id="go-menu-btn">Go to Menu</button>
+        </div>
+        <div id="canvas-container">
+            <canvas id="canvas" width="5000", height="5000"></canvas>
+            <p id="text-on-screen"></p>
+            <div id="lap-stats">
+                <p id="lap-num">Lap: 0/0</p>
+                <p id="lap-1"></p>
+            </div>
+            <p id="speed-indicator">0 km/h</p> 
+        </div>
+    </main>
+</body>
+</html>

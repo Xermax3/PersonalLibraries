@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+		<h1>LITFAM's COVID BUBBLE SIMULATION</h1>
+	</header>
+	<nav>
+		<a href="./index.html">Home</a>
+		<a href="./login.html">Login</a>
+    </nav>
+    <main id="main-width-limit">
+        <h2 id="page-title">Login</h2>
+        <div class="form-container">
+            <form id="login-form" action="./bubble-simulation.html">
+                <label for="userEmail">Email Address:</label>
+                <input type="email" id="userEmail" required>
+                <label for ="userPassword">Password:</label>
+                <input type="password" id="userPassword" required minlength="8">
+                <button type="submit" class="btn" value="Submit"><i class="fas fa-mouse-pointer"></i> Submit</button>
+            </form>  
+        </div>
+    </main>
+    <footer>
+		<div>Website created by the <strong>Licensed Internet Technicians Fabian And Maxence (LITFAM)</strong></div>
+		<div>Fabian H. Dimitrov and Maxence Roy (2020)</div>
+	</footer>
+
+    <!--Scripts-->
+    <script src="login.js"></script>
+	<script src="https://kit.fontawesome.com/20d18bedad.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
